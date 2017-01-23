@@ -151,8 +151,6 @@ def wb_to_csvfile(wb, csv_filename, dialect):
                    csv_filename))
     ws = wb.active
     mode = 'w'
-    if USING_PYTHON2:
-        mode += 'b'
     with open(csv_filename, mode) as csv_file:
         writer = csv.writer(csv_file, dialect=dialect, lineterminator='\n')
         for row in ws.rows:
