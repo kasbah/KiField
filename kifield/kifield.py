@@ -35,7 +35,7 @@ import sys
 import os
 import re
 import operator
-import csv
+import unicodecsv as csv
 import logging
 from copy import deepcopy
 from pprint import pprint
