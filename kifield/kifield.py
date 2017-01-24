@@ -125,7 +125,7 @@ def csvfile_to_wb(csv_filename):
         DEBUG_DETAILED,
         'Converting CSV file {} into an XLSX workbook.'.format(csv_filename))
 
-    with open(csv_filename) as csv_file:
+    with open(csv_filename, encoding='utf-8') as csv_file:
         dialect = csv.Sniffer().sniff(csv_file.read())
         if USING_PYTHON2:
             for attr in dir(dialect):
